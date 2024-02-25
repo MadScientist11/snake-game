@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+    <div id="game-screen" class="screen">
+        <h1>Your game code is: <span id="gameCodeDisplay"></span></h1>
+        <canvas id="canvas1"></canvas>
+    </div>
+
+    <div id="main-menu" class="screen">
+        <div class="button-container">
+            <button id="play-button">Play!</button>
+            <button id="leaderboard-button">Leaderboard</button>
+        </div>
+
+    </div>
+
+    <div id="leaderboard-screen" class="screen">
+        <div class="wrapper">
+            <table id="highscore-table">
+                <caption>High Scores (total 20)</caption>
+                <tr>
+                    <th>Pos</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Step</th>
+                </tr>
+
+            </table>
+
+            <button id="leaderboard-exit-button">Exit</button>
+        </div>
+
+
+    </div>
+
+    <div id="create-game-screen" class="h-100 screen">
+        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+            <h1>Multiplayer Snake</h1>
+            <button
+                    type="submit"
+                    class="btn btn-success"
+                    id="newGameButton"
+            >
+                Create New Game
+            </button>
+            <div>OR</div>
+            <div class="form-group">
+                <input type="text" placeholder="Enter Game Code" id="gameCodeInput"/>
+            </div>
+            <button
+                    type="submit"
+                    class="btn btn-success"
+                    id="joinGameButton"
+            >
+                Join Game
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
